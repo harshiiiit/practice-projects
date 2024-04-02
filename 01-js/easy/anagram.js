@@ -12,3 +12,16 @@ function isAnagram(str1, str2) {
 }
 
 module.exports = isAnagram;
+
+
+// Hi Harkirat Sir, I have written one more test case for the Anagram function. The test case is: what if someone gives input as two numbers? I have also written a check for this test case.
+
+ // // Test Case for non string
+// test('check if "121 and 121" are anagrams', () => {
+//   expect(isAnagram(121, 121)).toBe(false);
+// });
+
+//Check :-
+//  if (typeof str1 !== "string" || typeof str2 !== "string") {
+    // return false;
+  // }
