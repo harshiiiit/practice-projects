@@ -6,7 +6,21 @@ Try running it for
 3. Sum from 1-1000000000
 Hint - use Date class exposed in JS
 */
+function sumOfOneToN(n){
+    var sum = 0;
+    for(var i = 0;i<=n;i++){
+        sum = sum+i;
+    }
+    return sum;
+}
 
-function calculateTime(n) {
+
+function calculateTime(sumOfOneToN,n) {
+    const startTime = performance.now();
+    const result = sumOfOneToN(n);
+    const endTime = performance.now();
+    const executionTime = (endTime - startTime) / 1000; // Convert to seconds
+    console.log(`Sum: ${result}`); 
+    console.log(`Execution time: ${executionTime} seconds`);
     return 0.01;
 }
