@@ -8,8 +8,40 @@
   - `npm run test-expenditure-analysis`
 */
 
-function calculateTotalSpentByCategory(transactions) {
-  return [];
+
+function solve(transactions) {
+  var spendEstimates = {};
+  for (var i = 0; i < transactions.length; i++) {
+    var t = transactions[i];
+    if (spendEstimates[t.category]) {
+      spendEstimates[t.category] = spendEstimates[t.category] + t.price;
+    } else {
+      spendEstimates[t.category] = t.price;
+    }
+  }
+  console.log(spendEstimates);
 }
 
-module.exports = calculateTotalSpentByCategory;
+const transactions = [
+  {
+    category: "food",
+    itemNames: "maggi",
+    price: 20,
+    timestamp: "2023-06-01T10:30:00Z",
+  },
+  {
+      category: "drink",
+    itemNames: "coke",
+    price: 40,
+    timestamp: "2023-06-01T10:30:00Z",
+  },
+  {
+      category: "drink",
+    itemNames: "lassi",
+    price: 50,
+    timestamp: "2023-06-01T10:30:00Z",
+  },
+];
+
+
+solve(transactions)
