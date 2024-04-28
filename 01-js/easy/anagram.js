@@ -8,7 +8,20 @@
 */
 
 function isAnagram(str1, str2) {
+  var str_1 = str1.split("").sort().join("");
+  var str_2 = str2.split("").sort().join("");
+
+  if(str_1 == str_2)
+  {
+    return true;
+  }
+  else{
+    return false;
+  }
+  
 
 }
+var result = isAnagram("hello","olleh");
+console.log(result);
 
-module.exports = isAnagram;
+// module.exports = isAnagram;
