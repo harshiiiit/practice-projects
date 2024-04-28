@@ -21,7 +21,7 @@ function isAnagram(str1, str2) {
   
 
 }
-var res = isAnagram("hello","olleh");
-console.log(res);
+var result = isAnagram("hello","olleh");
+console.log(result);
 
 // module.exports = isAnagram;
